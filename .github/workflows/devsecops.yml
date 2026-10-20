@@ -27,11 +27,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
+      
       - name: Run Unit Tests
         run: |
-          pytest
-
+          python -m pytest
+          
   sast-scan:
     name: SAST Scan (CodeQL)
     needs: build
